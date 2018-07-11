@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.manishtaraiya.bleterm.ChatActivity">
+    <item
+        android:id="@+id/connect"
+        android:orderInCategory="101"
+        android:title="Connect"
+        android:icon="@drawable/ic_bluetooth_white_48dp"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/disconnect"
+        android:orderInCategory="102"
+        android:title="Disconnect"
+        android:icon="@drawable/ic_bluetooth_connected_white_48dp"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/connecting"
+        android:orderInCategory="102"
+        android:title="Connecting"
+        android:icon="@drawable/ic_bluetooth_searching_white_48dp"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/log"
+        android:title="Log"
+        android:orderInCategory="103"
+        android:icon="@drawable/log"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/stoplog"
+        android:title="Log"
+        android:orderInCategory="103"
+        android:icon="@drawable/ic_not_interested_white_48dp"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/clear"
+        android:title="Clear Screen"
+        android:orderInCategory="104"
+        android:icon="@drawable/ic_delete_white_48dp"
+        app:showAsAction="ifRoom"/>
+   <!-- <item
+        android:id="@+id/log"
+        android:title="start log" />-->
+</menu>

@@ -1,0 +1,344 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <!--
+    android:background="#0b1b40fb"android:rectback="@drawable/background1"-->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/disconnected"
+            android:textColor="#0e1686"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Rssi_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:text="@string/Rssi_db"
+            android:textColor="#0e1686"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/Rxtext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/radio_lay1"
+        android:layout_below="@+id/tableRow1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/custom_text"
+        android:gravity="bottom|fill_horizontal"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:textColor="#f8f8f8"
+        android:textColorHint="#f8f8f8"
+        android:textSize="@dimen/text_size" />
+
+    <LinearLayout
+        android:id="@+id/radio_lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnlay"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transmit_format" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/receive_format" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+
+                android:id="@+id/tx_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tx_radio_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/string" />
+
+                <RadioButton
+                    android:id="@+id/tx_radio_byte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/byte_array" />
+
+
+            </RadioGroup>
+
+            <RadioGroup
+
+                android:id="@+id/rx_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rx_radio_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/string" />
+
+                <RadioButton
+                    android:id="@+id/rx_radio_byte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/byte_array" />
+
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- <LinearLayout
+
+         android:id="@+id/radio_lay2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/radio_lay1"
+         android:layout_gravity="center_horizontal"
+         android:gravity="center"
+         android:orientation="horizontal">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="10dp"
+             android:layout_marginStart="10dp"
+             android:text="@string/receive_format" />
+
+         <RadioGroup
+
+             android:id="@+id/radioSex"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+             <RadioButton
+                 android:id="@+id/radioMale"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:checked="true"
+                 android:text="@string/string" />
+
+             <RadioButton
+                 android:id="@+id/radioFemale"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/byte_array" />
+
+
+         </RadioGroup>
+     </LinearLayout>-->
+    <!--  "#191970"
+  android:layout_marginBottom="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"-->
+
+
+    <LinearLayout
+        android:id="@+id/btnlay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sendtxtlay"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/notifybutton"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+
+            fancy:fb_defaultColor="#00cf00"
+            fancy:fb_focusColor="#cb000e"
+            fancy:fb_fontIconResource="@string/icon_notify"
+            fancy:fb_fontIconSize="18dp"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Notify "
+            fancy:fb_textColor="#ffffff" />
+        <!--  <Button
+              android:id="@+id/notifybutton"
+              android:padding="10dp"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:background="@drawable/custom_button"
+              android:textColor="#F5FFFA"
+              android:text="Notify" />-->
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/readbutton"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+
+            fancy:fb_defaultColor="#00cf00"
+            fancy:fb_focusColor="#cb000e"
+            fancy:fb_fontIconResource="@string/icon_read"
+            fancy:fb_fontIconSize="18dp"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Read "
+            fancy:fb_textColor="#ffffff" />
+        <!--  <Button
+              android:id="@+id/readbutton"
+              android:padding="10dp"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:background="@drawable/custom_button"
+              android:textColor="#F5FFFA"
+              android:text="Read" />-->
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sendtxtlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sendtext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="4"
+            android:background="@drawable/custom_edit"
+            android:ems="10"
+            android:hint="Type and click on write"
+            android:padding="9dp"
+            android:textColor="#333333" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/writebutton"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2"
+            android:padding="10dp"
+
+            fancy:fb_defaultColor="#00cf00"
+            fancy:fb_focusColor="#cb000e"
+            fancy:fb_fontIconResource="@string/icon_write"
+            fancy:fb_fontIconSize="18dp"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Write "
+            fancy:fb_textColor="#ffffff" />
+        <!--<Button
+            android:id="@+id/writebutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:text="Write"
+            android:textColor="#F5FFFA"
+            android:background="@drawable/custom_button" />-->
+
+        <!-- <ImageButton
+              android:id="@+id/writebutton"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginBottom="1dp"
+              android:layout_marginLeft="5dp"
+              android:layout_marginRight="5dp"
+              android:layout_marginTop="1dp"
+              android:background="@drawable/arrow" />-->
+
+    </LinearLayout>
+
+
+</RelativeLayout>

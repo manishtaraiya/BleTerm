@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="#f2f2f2"
+    android:descendantFocusability="beforeDescendants">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/list_item_selector"
+        android:descendantFocusability="afterDescendants"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        >
+        <me.itangqi.waveloadingview.WaveLoadingView
+
+            android:id="@+id/waveLoadingView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            app:wlv_borderWidth="3dp"
+            app:wlv_progressValue="40"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenter="Center Title"
+            app:wlv_titleCenterColor="@color/waveviewtext"
+            app:wlv_titleCenterSize="14sp"
+            app:wlv_titleCenterStrokeColor="@color/waveviewbackground"
+            app:wlv_titleCenterStrokeWidth="0dp"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/waveviewbackground"
+            app:wlv_borderColor="@color/waveviewbackground"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#ec407a" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="#4fa5d5" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+
+            <TextView
+                android:id="@+id/device_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How r u?"
+                android:textSize="18dp"
+                android:textStyle="italic"
+                android:textColor="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

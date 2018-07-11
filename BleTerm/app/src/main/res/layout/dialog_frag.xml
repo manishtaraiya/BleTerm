@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fafafa"
+    android:minWidth="1000dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available read characteristics"
+        android:textSize="24sp"
+        android:textColor="@color/colortext"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_horizontal"
+        android:id="@+id/fragtitle" />
+    <ListView
+        android:id="@+id/fraglist"
+        android:paddingTop="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </ListView>
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="10dp" />
+
+
+</LinearLayout>

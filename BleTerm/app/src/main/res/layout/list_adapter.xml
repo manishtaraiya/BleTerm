@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!--<me.itangqi.waveloadingview.WaveLoadingView
+        android:layout_weight="10"
+        android:id="@+id/waveLoadingView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:wlv_borderColor="@color/colorAccent"
+        app:wlv_borderWidth="3dp"
+        app:wlv_progressValue="40"
+        app:wlv_shapeType="circle"
+        app:wlv_round_rectangle="true"
+        app:wlv_triangle_direction="north"
+        app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_titleCenter="Center Title"
+        app:wlv_titleCenterColor="@android:color/white"
+        app:wlv_titleCenterSize="24sp"
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="@color/colorAccent"/>-->
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/waveLoadingView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        app:wlv_borderWidth="3dp"
+        app:wlv_progressValue="40"
+        app:wlv_round_rectangle="true"
+        app:wlv_shapeType="circle"
+        app:wlv_titleCenter="Center Title"
+        app:wlv_titleCenterColor="@color/waveviewtext"
+        app:wlv_titleCenterSize="14sp"
+        app:wlv_titleCenterStrokeColor="@color/waveviewbackground"
+        app:wlv_titleCenterStrokeWidth="0dp"
+        app:wlv_triangle_direction="north"
+        app:wlv_waveAmplitude="70"
+        app:wlv_waveColor="@color/waveviewbackground"
+        app:wlv_borderColor="@color/waveviewbackground"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:paddingStart="5dp">
+
+        <TextView
+
+            android:id="@+id/childTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Hello"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:paddingBottom="5dp"
+            android:id="@+id/mac_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="11:22:33:44:55:66" />
+
+        <TextView
+
+            android:id="@+id/raw_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Raw_data"
+            android:lineSpacingExtra="8sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="normal|bold" />
+
+
+    </LinearLayout>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:layout_weight="2"
+        android:id="@+id/connect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="#7ab800"
+        fancy:fb_focusColor="#9bd823"
+        fancy:fb_fontIconResource="&#xf294; "
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Connect"
+        fancy:fb_textColor="#FFFFFF" />
+
+
+
+    <!--<Button
+        android:layout_gravity="center_vertical"
+        android:id="@+id/childButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Connect" />
+-->
+
+</LinearLayout>

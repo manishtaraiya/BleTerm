@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">BleTerm</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_scan">SCAN</string>
+    <string name="menu_stop">stop</string>
+    <string name="title_devices">Scan Device</string>
+    <string name="ble_not_supported">Your phone does not support BLE.</string>
+    <string name="error_bluetooth_not_supported">Your phone does not support BlueTooth.</string>
+    <string name="unknown_device">Unknown Device</string>
+    <string name="title_activity_chat">chat</string>
+    <string name="Rssi_val">RSSI:</string>
+    <string name="Rssi_db">RSSI: ___db</string>
+    <string name="title_activity_chat_screen">ChatScreen</string>
+    <string name="connected">Status: Connected</string>
+    <string name="disconnected">Status: Disconnected</string>
+    <string name="title_activity_Setting">Setting</string>
+    <string name="connecting">Status: Connecting</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <string name="icon_notify">&#xf075;</string>
+    <string name="icon_write">&#xf1d8;</string>
+    <string name="icon_read">&#xf15c;</string>
+    <string name="native_ad_unit_id">ca-app-pub-7701780769580238/2683480503</string>
+    <string name="banner_ad_unit_id">ca-app-pub-7701780769580238/4667534109</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="Raw_data"> <u>Raw Data</u></string>
+    <string name="filter_name">Eg: My Smart Watch</string>
+    <string name="share_icon">&#xE80D;</string>
+    <string name="receive_format">Receive Format</string>
+    <string name="string">String</string>
+    <string name="byte_array">Byte Array</string>
+    <string name="transmit_format">Transmit Format</string>
+    <string name="filter_menu">Filter</string>
+    <string name="share_log_file_menu">Share log file</string>
+    <string name="communicate_menu">Communicate</string>
+    <string name="share_app_menu">Share</string>
+    <string name="rate_app_menu">Rate</string>
+    <string name="feedback_menu">Feedback</string>
+
+
+</resources>

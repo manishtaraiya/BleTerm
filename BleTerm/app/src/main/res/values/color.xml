@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <color name="my_blue">#3498DB</color>
+    <color name="my_blue_dark">#2f8cdb</color>
+    <color name="my_green">#77D065</color>
+    <color name="my_purple">#B455B6</color>
+    <color name="my_gray">#738182</color>
+    <color name="my_black">#000022</color>
+    <color name="my_background">#0b1b40fb</color>
+    <color name="colorPrimary">#0f2ac1</color>
+    <color name="colorPrimaryDark">#0319a6</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colortext">#fafafa</color>
+
+    <color name="light_grey">#cccccc</color>
+    <color name="waveviewtext">#4a148c</color>
+    <color name="waveviewbackground">#00bcd4</color>
+    <color name="background">#fafafa</color>
+    <color name="background1">#01579b</color>
+
+    <color name="white">#ECF0F1</color>
+</resources>

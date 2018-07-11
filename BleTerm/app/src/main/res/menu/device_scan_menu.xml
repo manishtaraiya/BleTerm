@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/menu_refresh"
+        android:checkable="false"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100"
+        android:title="" />
+    <item
+        android:id="@+id/menu_scan"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="101"
+        android:title="Scan" />
+    <item
+        android:id="@+id/menu_stop"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="101"
+        android:title="Stop" />
+    <!--<item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings_white_48dp"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="102"
+        android:title="Settings" />
+    <item
+        android:id="@+id/share_log"
+        android:icon="@drawable/ic_share_white_48dp"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="103"
+        android:title="Share log file" />-->
+
+    <!--<item
+        android:id="@+id/help"
+        android:icon="@drawable/ic_help_white_48dp"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="104"
+        android:title="Help" />
+-->
+</menu>

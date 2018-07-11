@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.manishtaraiya.bleterm.Scan.ScanActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/devicelist"
+        >
+
+        <TextView
+            android:id="@+id/ble_search_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Searching for BLE device"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic|bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/Search_text_margin" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/search_anim"
+            style="@style/AVLoadingIndicatorView"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallScaleMultipleIndicator"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <com.google.android.gms.ads.NativeExpressAdView
+        android:id="@+id/adView_native"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="320x100"
+        ads:adUnitId="@string/native_ad_unit_id">
+    </com.google.android.gms.ads.NativeExpressAdView>
+
+    <ListView
+        android:id="@+id/devicelist"
+        android:layout_above="@+id/adView_native"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <!--
+   android:layout_above="@+id/adView"
+    <com.google.android.gms.ads.AdView
+         android:id="@+id/adView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         ads:adSize="BANNER"
+         ads:adUnitId="@string/banner_ad_unit_id"/>-->
+
+</RelativeLayout>

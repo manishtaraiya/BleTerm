@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:summary="Note: Notify Characteristic will \nautomatically added for given Service">
+
+ <!--   <PreferenceCategory android:title="Service Setting">
+
+        <EditTextPreference
+            android:key="prefService"
+            android:summary="which Characteristic you want to read/write/notify."
+            android:title="Set Service UUID" />
+    </PreferenceCategory>-->
+
+  <!--  <PreferenceCategory android:title="Characteristic Setting">
+
+        <EditTextPreference
+            android:key="prefwrChar"
+            android:summary="Set your device Write Characteristic uuid"
+            android:title="Set Write Characteristic UUID" />
+
+     &lt;!&ndash;   <EditTextPreference
+            android:key="prefRxChar"
+            android:summary="Set your device Rx Characteristic uuid"
+            android:title="Set Rx Characteristic UUID" />
+&ndash;&gt;
+    </PreferenceCategory>-->
+
+    <PreferenceCategory android:title="BLE Setting">
+        <!--
+                <CheckBoxPreference
+                     android:defaultValue="false"
+                     android:key="prefSendReport"
+                     android:summary="@string/pref_send_report_summary"
+                     android:title="@string/pref_send_report"></CheckBoxPreference>
+    -->
+       <!-- <ListPreference
+            android:entries="@array/scanFrequency"
+            android:entryValues="@array/scanFrequencyValues"
+            android:key="prefScanFrequency"
+            android:summary="Set Scanning time "
+            android:title="Scan Frequency" />-->
+
+        <ListPreference
+            android:entries="@array/charselect"
+            android:entryValues="@array/charselectValues"
+            android:key="prefcharrxselect"
+            android:summary="Set String/Byte Array"
+            android:title="Receive format" />
+        <ListPreference
+            android:entries="@array/charselect"
+            android:entryValues="@array/charselectValues"
+            android:key="prefchartxselect"
+            android:summary="Set String/Byte Array"
+            android:title="Transmit format" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
