@@ -72,7 +72,11 @@ public class ScanActivity extends AppCompatActivity implements NavigationView.On
     ArrayList<Integer> device_rssi;
     Scan_CustomAdapter customAdapter;*/
     ListView devicelist;
-
+	private static final String AD_MOB_ID = "xxxxxxxxxxxxxxxxxxxx";
+	private static final String TEST_DEVICE1 = "xxxxxxxxxxxxxxxxxxxx";
+	private static final String TEST_DEVICE2 = "xxxxxxxxxxxxxxxxxxxx";
+	
+	
     private static final int REQUEST_ENABLE_BT = 1;
     private static final int REQUEST_ENABLE_GPS = 2;
     private static final int REQUEST_ENABLE_STORAGE = 3;
@@ -206,13 +210,13 @@ public class ScanActivity extends AppCompatActivity implements NavigationView.On
 */
 
 
-        MobileAds.initialize(getApplicationContext(), "ca-app-pub-7701780769580238~4807134900");//"ca-app-pub-7701780769580238/4667534109");
+        MobileAds.initialize(getApplicationContext(), AD_MOB_ID););
         //AdView mAdView = (AdView) findViewById(R.id.adView);
         nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView_native);
         AdRequest.Builder adRequestBuilder = new AdRequest.Builder();
         adRequestBuilder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
-        adRequestBuilder.addTestDevice("41C24EA2F184CB0C12DF064FBA671882");
-        adRequestBuilder.addTestDevice("3F662D6DA6DC09A602ED691F1BD6CDEB");
+        adRequestBuilder.addTestDevice(TEST_DEVICE1);
+        adRequestBuilder.addTestDevice(TEST_DEVICE2);
         adRequest = adRequestBuilder.build();
         nativeExpressAdView.loadAd(adRequest);
 
